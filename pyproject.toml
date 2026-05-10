@@ -1,0 +1,45 @@
+[project]
+name = "llm-model-practice"
+version = "0.1.0"
+description = "Learning LLM model creation from scratch — Phase 1 through 5"
+requires-python = ">=3.11"
+
+dependencies = [
+    # Core ML
+    "torch>=2.5.1",
+    "numpy>=1.26.4",
+
+    # Hugging Face ecosystem (Phase 3 & 4)
+    "transformers>=4.46.2",
+    "peft>=0.13.0",
+    "datasets>=3.0.0",
+    "accelerate>=1.0.0",
+    "huggingface-hub>=0.26.5",
+    "tokenizers>=0.20.3",
+    "safetensors>=0.4.5",
+
+    # API serving (Phase 4)
+    "fastapi>=0.115.0",
+    "uvicorn>=0.34.0",
+    "pydantic>=2.10.0",
+
+    # Anthropic SDK (Phase 5)
+    "anthropic>=0.40.0",
+
+    # HTTP client (Phase 5 coding agent)
+    "httpx>=0.27.0",
+
+    # Utilities
+    "tqdm>=4.67.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.1.0",
+    "ipykernel>=6.29.0",
+]
+
+[tool.uv]
+# This is a scripts-only project, not an installable package
+package = false
